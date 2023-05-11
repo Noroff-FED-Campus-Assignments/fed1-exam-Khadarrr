@@ -1,13 +1,70 @@
-/* the props */
-@import "open-props/style";
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
 
-/* optional imports that use the props */
-@import "open-props/normalize";
-@import "animate.css";
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-@import "css/variables.css";
-@import "css/reset.css";
-@import "css/utilities.css";
-@import "css/layout.css";
-@import "css/form.css";
-@import "css/ui.css";
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-image {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.post-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #6c96da;
+}
+
+.post-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.post-content a {
+  display: inline-block;
+  background-color: #6c96da;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}

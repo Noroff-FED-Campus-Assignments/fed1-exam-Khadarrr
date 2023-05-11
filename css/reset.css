@@ -6,7 +6,7 @@
  */
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Croissant One, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 300;
   font-synthesis: none;
@@ -22,6 +22,7 @@ html {
   padding: 0;
   font-size: 100%;
   vertical-align: baseline;
+  background-color: #f8f9fa;
 }
 
 *,
@@ -31,7 +32,7 @@ html {
 }
 
 a {
-  color: #646cff;
+  color: #ffffff;
   text-decoration: inherit;
 }
 
@@ -52,6 +53,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  color: #6c96da;
 }
 
 img {

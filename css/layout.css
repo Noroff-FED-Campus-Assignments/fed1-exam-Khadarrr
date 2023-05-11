@@ -22,10 +22,13 @@ body {
 
 .l-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   grid-area: header;
   width: 100%;
   padding: var(--size-fluid-1);
+  background-color: #6c757d;
 }
 
 .l-main {
@@ -42,6 +45,7 @@ body {
   grid-area: footer;
   width: 100%;
   padding: var(--size-fluid-1);
+  background-color: #6c757d;
 }
 
 .l-content {
