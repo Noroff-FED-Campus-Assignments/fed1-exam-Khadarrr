@@ -3,7 +3,7 @@ const swiperContainer = document.querySelector(".swiper-container");
 
 async function fetchBlogPost() {
   try {
-    const response = await fetch("http://arts-culture.local//wp-json/wp/v2/posts/");
+    const response = await fetch("http://arts-culture.local//wp-json/wp/v2/posts/?per_page=12");
     const posts = await response.json();
 
     const postPromises = posts.map(async (post) => {
@@ -26,8 +26,8 @@ async function fetchBlogPost() {
           <div class="post-image" style="background-image: url(${imageUrl})"></div>
           <div class="post-content">
             <h2>${post.title.rendered}</h2>
-            <p>${post.excerpt.rendered}</p>
-            <a href="${post.link}">Read more</a>
+            
+            <a href="details.html?id=${post.id}&imageUrl=${encodeURIComponent(imageUrl)}">Read more</a>
           </div>
         </div>
       `;
@@ -37,7 +37,7 @@ async function fetchBlogPost() {
 
     new Swiper(swiperContainer, {
       slidesPerView: 1,
-      spaceBetween: 20, 
+      spaceBetween: 10,
       autoplay: {
         delay: 1500,
       },
@@ -48,10 +48,10 @@ async function fetchBlogPost() {
       },
       breakpoints: {
         768: {
-          slidesPerView: 2, 
-         spaceBetween: 75,
-        }
-      }
+          slidesPerView: 4,
+          spaceBetween: 75,
+        },
+      },
     });
   } catch (error) {
     console.log(error);

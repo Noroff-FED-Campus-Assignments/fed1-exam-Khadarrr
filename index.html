@@ -10,16 +10,15 @@
       content="HTML, CSS, JavaScript,"
     />
     <meta name="Khadar" content="@Khadarrr" />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/universal.css" />
-    <script defer src="/js/app.js"></script>
-    <script defer src="/blog.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./universal.css" />
+    <script type="module" defer src="./js/app.js" ></script>
+    <script type="module" defer src="./js/blog.js"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <title>Art`s and CULTURE</title>
   </head>
   <body class="animate__animated animate__fadeIn">
@@ -36,41 +35,41 @@
       </div>
       <nav>
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/details.html">Details</a></li>
-          <li><a href="/details.html">Contact</a></li>
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/blog.html">BLOG</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
         </ul>
       </nav>
     </header>
-    <main class="l-main">
-      <img
-        src="/assets/Rectangle 7.png"
-        loading="lazy"
-        alt="…"
-        class="u-img hero-image"
-        width="1024"
-        height="1024"
-      />
-      <section role="search"></section>
-
-      <article role="doc-introduction">
-        <h2>Blogposts</h2>
+    <section class="header-section">
+      <div class="hero-container">
+        <div class="text-container">
+          <h1 class="text-header">Welcome to our captivating blog page dedicated to arts and culture!</h1>
+          <p class="text-content">Here, we embark on a remarkable journey through the vibrant world of creativity, where we delve into the diverse forms of artistic expression and uncover the rich tapestry of cultures that shape our global society.</p>
+          <a href="/blog.html"><button class="button">Blog posts</button></a>
+        </div>
+        <div class="image-container">
+          <img class="hero-img" src="/assets/heroimg.jpeg" alt="">
+        </div>
+      </div>
+    </section>
+    <main>
+    <h2>LATEST POSTS</h2>
 
       <section>
         <div class="swiper-container">
           <div class="swiper-wrapper" id="blogg-post">
       </section>
     </main>
+    <div class="clock-cont">
+      <button class="clock-button">
+        <div class="clock"></div>
+      </button>
+    </div>
+    <small>Made by @Khadarrr</small>
     <footer class="footer">
-      <img height="470px" src="/assets/Rectangle footer.png" alt="" />
-      <div class="clock-cont">
-        <button class="clock-button">
-          <div class="clock"></div>
-        </button>
-      </div>
-      <small>Made by @Khadarrr</small>
+      
     </footer>
   </body>
 </html>

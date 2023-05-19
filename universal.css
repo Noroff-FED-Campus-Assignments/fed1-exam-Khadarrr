@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
+
 :root {
-  font-family: Croissant One, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 300;
   font-synthesis: none;
@@ -64,8 +66,12 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-family: "Croissant One", sans-serif;
 }
 
+.header-words {
+  font-family: "Croissant One", sans-serif;
+}
 .logo {
   margin-right: 20px;
 }
@@ -147,22 +153,47 @@ nav li h3 {
   display: flex;
 }
 
-.footer {
+.header-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-header {
+}
+
+.hero-image {
+  max-width: 50%;
+}
+
+main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.titale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #6c757d;
+  color: white;
+}
+footer {
+  background-color: #6c757d;
+  background-image: url(./assets/footer-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.footer img {
-  margin-bottom: 5px;
 }
 
 small {
   font-size: 12px;
-  color: #777;
+  color: white;
 }
 
 .clock-container {
@@ -195,6 +226,16 @@ small {
 }
 
 @media screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .text-container,
+  .image-container {
+    padding-right: 0;
+    text-align: center;
+  }
+
   .clock-button {
     font-size: 18px;
     width: 100px;
@@ -220,5 +261,30 @@ small {
 
   .hamburger {
     display: block;
+  }
+
+  main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  footer {
+    height: 250px;
+  }
+
+  .result-item {
+    flex-direction: column;
+    border-radius: 8px;
+  }
+
+  .result-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .result-content {
+    padding: 20px;
   }
 }

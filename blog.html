@@ -7,10 +7,10 @@
     <meta name="description" content="_REPLACE_WITH_DESCRIPTION_" />
     <meta name="keywords" content="HTML, CSS, JavaScript," />
     <meta name="Khadar" content="@Khadarrr" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/blog.css" />
     <link rel="stylesheet" href="/universal.css" />
-    <script defer src="/js/app.js"></script>
-    <script defer src="/blog.js"></script>
+    <script type="module" defer src="./js/app.js"></script>
+    <script type="module" defer src="./js/search.js"></script>
     <title>Art`s and CULTURE</title>
   </head>
   <body class="animate__animated animate__fadeIn">
@@ -21,7 +21,7 @@
           alt="Logo"
         />
       </div>
-      <h2>ART'S AND CULTURE</h2>
+      <h2 class="header-words">ART'S AND CULTURE</h2>
       <div class="hamburger">
         <span></span>
         <span></span>
@@ -30,23 +30,33 @@
       </div>
       <nav>
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/details.html">Details</a></li>
-          <li><a href="/details.html">Contact</a></li>
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/blog.html">BLOG</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
         </ul>
       </nav>
     </header>
-    <main></main>
-    <footer class="footer">
-      <img height="470px" src="/assets/Rectangle footer.png" alt="" />
-      <div class="clock-cont">
-        <button class="clock-button">
-          <div class="clock"></div>
-        </button>
+    <main>
+      <form id="js-search-form">
+        <fieldset class="fieldset">
+          <label for="js-search">Search</label>
+          <input type="search" id="js-search" name="search" />
+        </fieldset>
+      </form>
+      <a href="/index.html" class="back-link"
+        ><button>BACK 2 HOMEPAGE</button></a
+      >
+      <div class="results" id="js-results">
+        <div class="loader" id="result-container"></div>
       </div>
+    </main>
+    <div class="clock-cont">
+      <button class="clock-button">
+        <div class="clock"></div>
+      </button>
       <small>Made by @Khadarrr</small>
-    </footer>
+      <footer class="footer"></footer>
+    </div>
   </body>
 </html>
