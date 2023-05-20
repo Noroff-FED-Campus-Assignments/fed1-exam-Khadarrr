@@ -31,7 +31,6 @@ body {
 }
 
 body,
-p,
 h1,
 h2,
 h3,
@@ -40,6 +39,18 @@ h5,
 h6 {
   margin: 0;
   color: #6c96da;
+}
+
+.titales {
+    color: black;
+    font-family: "Croissant One", sans-serif;
+    padding: 20px;
+}
+
+p {
+  color: black;
+  size: bold;
+  margin: 0;
 }
 
 img {
@@ -72,6 +83,7 @@ header {
 .header-words {
   font-family: "Croissant One", sans-serif;
 }
+
 .logo {
   margin-right: 20px;
 }
@@ -158,13 +170,6 @@ nav li h3 {
   flex-direction: row;
 }
 
-.text-header {
-}
-
-.hero-image {
-  max-width: 50%;
-}
-
 main {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -185,7 +190,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 375px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -286,5 +291,39 @@ small {
 
   .result-content {
     padding: 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .form-container {
+    padding-right: 0;
+  }
+
+  .image-container {
+    margin-top: 30px;
+  }
+
+  .spotlight-section {
+    padding: 20px;
+  }
+
+  .spotlight-container {
+    flex-direction: column;
+  }
+
+  .spotlight-post {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .spotlight-post h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .spotlight-post div {
+    font-size: 14px;
   }
 }

@@ -36,7 +36,7 @@ async function fetchBlogPost() {
     blogContainer.innerHTML = swiperSlides.join("");
 
     new Swiper(swiperContainer, {
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 10,
       autoplay: {
         delay: 1500,
@@ -49,7 +49,7 @@ async function fetchBlogPost() {
       breakpoints: {
         768: {
           slidesPerView: 4,
-          spaceBetween: 75,
+          spaceBetween: 50,
         },
       },
     });
@@ -59,4 +59,30 @@ async function fetchBlogPost() {
 }
 
 fetchBlogPost();
+
+
+fetch("http://arts-culture.local/wp-json/wp/v2/posts?per_page=2")
+    .then(response => response.json())
+    .then(posts => {
+      const spotlightPostsContainer = document.querySelector('.spotlight-posts');
+
+      posts.forEach(post => {
+        const postElement = document.createElement('div');
+        postElement.classList.add('spotlight-post');
+
+        const titleElement = document.createElement('h2');
+        titleElement.textContent = post.title.rendered;
+
+        const contentElement = document.createElement('div');
+        contentElement.innerHTML = post.content.rendered;
+
+        postElement.appendChild(titleElement);
+        postElement.appendChild(contentElement);
+
+        spotlightPostsContainer.appendChild(postElement);
+      });
+    })
+    .catch(error => {
+      console.log('Error fetching spotlight posts:', error);
+    });
 

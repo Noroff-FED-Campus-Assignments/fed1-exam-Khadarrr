@@ -16,12 +16,16 @@
 .text-header {
   font-size: 32px;
   margin-bottom: 20px;
+  font-weight: bold;
+  
 }
 
 .text-content {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 30px;
+  font-weight: bold;
+
 }
 
 .image-container {
@@ -77,7 +81,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: white;
+  background-color: #6c96da;
 }
 
 .swiper-slide {
@@ -114,7 +118,6 @@
   font-size: 18px;
   margin-bottom: 20px;
   color: black;
- 
 }
 
 .post-content a {
@@ -126,3 +129,40 @@
   border-radius: 5px;
   transition: background-color 0.2s ease-in-out;
 }
+
+.spotlight-section {
+  background-color: #f0f0f0;
+  padding: 100px;
+  color: black;
+}
+
+.spotlight-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: black;
+}
+
+.spotlight-posts {
+  display: flex;
+  flex-direction: row;
+  color: black;
+}
+
+.spotlight-post {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.spotlight-post h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.spotlight-post div {
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+}
+

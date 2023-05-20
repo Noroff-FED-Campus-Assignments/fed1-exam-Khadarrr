@@ -9,7 +9,8 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         contact: resolve(__dirname, "contact.html"),
         blog: resolve(__dirname, "blog.html"),
-   
+        details: resolve(__dirname, "details.html"),
+        about: resolve(__dirname, "about.html"),
       },
     },
   },
