@@ -3,12 +3,12 @@ const swiperContainer = document.querySelector(".swiper-container");
 
 async function fetchBlogPost() {
   try {
-    const response = await fetch("http://arts-culture.local//wp-json/wp/v2/posts/?per_page=12");
+    const response = await fetch("https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/?per_page=12");
     const posts = await response.json();
 
     const postPromises = posts.map(async (post) => {
       if (post.featured_media) {
-        const mediaResponse = await fetch(`http://arts-culture.local//wp-json/wp/v2/media/${post.featured_media}`);
+        const mediaResponse = await fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/media/${post.featured_media}`);
         const media = await mediaResponse.json();
         return { ...post, featuredMediaUrl: media.source_url };
       } else {
@@ -36,7 +36,7 @@ async function fetchBlogPost() {
     blogContainer.innerHTML = swiperSlides.join("");
 
     new Swiper(swiperContainer, {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 10,
       autoplay: {
         delay: 1500,
@@ -61,28 +61,33 @@ async function fetchBlogPost() {
 fetchBlogPost();
 
 
-fetch("http://arts-culture.local/wp-json/wp/v2/posts?per_page=2")
-    .then(response => response.json())
-    .then(posts => {
-      const spotlightPostsContainer = document.querySelector('.spotlight-posts');
+const spotlightPosts = document.querySelector('.spotlight-posts');
 
-      posts.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.classList.add('spotlight-post');
+    fetch("https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts?per_page=2")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch spotlight posts.");
+        }
+        return response.json();
+      })
+      .then(posts => {
+        posts.forEach(post => {
+          const postElement = document.createElement('div');
+          postElement.classList.add('spotlight-post');
 
-        const titleElement = document.createElement('h2');
-        titleElement.textContent = post.title.rendered;
+          const titleElement = document.createElement('h2');
+          titleElement.textContent = post.title.rendered;
 
-        const contentElement = document.createElement('div');
-        contentElement.innerHTML = post.content.rendered;
+          const contentElement = document.createElement('div');
+          contentElement.innerHTML = post.content.rendered;
 
-        postElement.appendChild(titleElement);
-        postElement.appendChild(contentElement);
+          postElement.appendChild(titleElement);
+          postElement.appendChild(contentElement);
 
-        spotlightPostsContainer.appendChild(postElement);
+          spotlightPosts.appendChild(postElement);
+        });
+      })
+      .catch(error => {
+        console.log('Error fetching spotlight posts:', error);
       });
-    })
-    .catch(error => {
-      console.log('Error fetching spotlight posts:', error);
-    });
 

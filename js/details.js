@@ -8,7 +8,7 @@ const postId = getPostIdFromURL();
     
     async function fetchPostDetails() {
       try {
-        const response = await fetch(`http://arts-culture.local//wp-json/wp/v2/posts/${postId}`);
+        const response = await fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/${postId}`);
         const post = await response.json();
 
         postTitleEl.textContent = post.title.rendered;
