@@ -2,11 +2,16 @@ const resultContainer = document.querySelector("#js-results");
 const formEl = document.querySelector("#js-search-form");
 const searchEl = document.querySelector("#js-search");
 const loadMoreButton = document.querySelector("#loadMoreButton");
+let currentPage = 1;
+const postsPerPage = 10;
+let totalPosts = 0;
 
-async function fetchBlogPosts(searchTerm) {
+async function fetchBlogPosts(searchTerm, page) {
   try {
-    const response = await fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/?per_page=10&search=${searchTerm}`);
+    const response = await fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/?per_page=${postsPerPage}&search=${searchTerm}&page=${page}`);
     const posts = await response.json();
+
+    totalPosts = parseInt(response.headers.get('X-WP-Total'));
 
     const postPromises = posts.map(async (post) => {
       if (post.featured_media) {
@@ -39,7 +44,11 @@ async function fetchBlogPosts(searchTerm) {
       `;
     });
 
-    resultContainer.innerHTML = resultsHTML.join("");
+    resultContainer.innerHTML += resultsHTML.join("");
+
+    if (currentPage * postsPerPage >= totalPosts) {
+      loadMoreButton.style.display = "none";
+    }
   } catch (error) {
     console.log(error);
   }
@@ -48,7 +57,14 @@ async function fetchBlogPosts(searchTerm) {
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   const searchTerm = searchEl.value;
-  fetchBlogPosts(searchTerm);
+  currentPage = 1;
+  fetchBlogPosts(searchTerm, currentPage);
 });
 
-fetchBlogPosts("");
+loadMoreButton.addEventListener("click", () => {
+  const searchTerm = searchEl.value;
+  currentPage++;
+  fetchBlogPosts(searchTerm, currentPage);
+});
+
+fetchBlogPosts("", currentPage);

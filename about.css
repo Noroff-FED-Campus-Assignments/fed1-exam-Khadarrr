@@ -6,48 +6,66 @@
   }
   
   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
     max-width: 960px;
     margin: 0 auto;
   }
   
   .image-container {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .text-container {
-    flex: 1;
-    padding: 0 50px;
+    text-align: left;
   }
   
   img {
     max-width: 100%;
     height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  h2 {
-    font-size: 24px;
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .title {
+    font-family: "Croissant One", sans-serif;
+    font-size: 32px;
     margin-bottom: 20px;
+
   }
   
   p {
     margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
   }
   
   .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1E90FF;
-    color: #fff;
+    background-color: #6c96da;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    text-align: center;
   }
   
   .btn:hover {
-    background-color: #1874CD;
+    background-color: #6c757d;
   }
+
+  @media (max-width: 767px) {
+    .about-section {
+      padding: 30px;
+    }
+  
+    .container {
+      grid-template-columns: 1fr;
+    }
+}
