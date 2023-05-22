@@ -129,8 +129,8 @@
 }
 
 .spotlight-section {
-  background-color: #f0f0f0;
-  padding: 100px;
+  background-color: #fff;
+  padding: 25px;
   color: black;
 }
 
@@ -144,7 +144,6 @@
 .spotlight-posts {
   display: flex;
   flex-direction: row;
-  color: black;
 }
 
 .spotlight-post {
@@ -160,8 +159,7 @@
 }
 
 .spotlight-post div {
-  font-size: 16px;
-  line-height: 1.6;
-  color: black;
+  font-size: 14px;
   font-weight: bold;
+  line-height: 1.5;
 }

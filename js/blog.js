@@ -49,7 +49,7 @@ async function fetchBlogPost() {
       breakpoints: {
         768: {
           slidesPerView: 4,
-          spaceBetween: 50,
+          spaceBetween: 35,
         },
       },
     });

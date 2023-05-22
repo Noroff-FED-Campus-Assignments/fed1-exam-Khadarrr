@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/universal.css" />
     <script type="module" defer src="./js/app.js"></script>
     <script type="module" defer src="./js/search.js"></script>
+    <script type="module" defer src="./js/loader.js"></script>
     <title>Art`s and CULTURE</title>
   </head>
   <body class="animate__animated animate__fadeIn">
@@ -37,6 +38,9 @@
         </ul>
       </nav>
     </header>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
     <main>
       <form id="js-search-form">
         <fieldset class="fieldset">
@@ -49,8 +53,9 @@
       >
       <div class="results" id="js-results">
         <div class="loader" id="result-container"></div>
+        <button id="loadMoreButton">Load More</button>
       </div>
-      <button>see more...</button>
+      
     </main>
     <div class="clock-cont">
       <button class="clock-button">

@@ -66,12 +66,13 @@
 }
 
 .result-content a {
-  color: #007bff;
+  color: #6c96da;
   text-decoration: none;
 }
 
 .result-content a:hover {
   text-decoration: underline;
+  color: #6c757d;
 }
 
 .back-link {

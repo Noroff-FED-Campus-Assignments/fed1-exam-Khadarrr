@@ -1,10 +1,11 @@
 const resultContainer = document.querySelector("#js-results");
 const formEl = document.querySelector("#js-search-form");
 const searchEl = document.querySelector("#js-search");
+const loadMoreButton = document.querySelector("#loadMoreButton");
 
 async function fetchBlogPosts(searchTerm) {
   try {
-    const response = await fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/?per_page=12&search=${searchTerm}`);
+    const response = await fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/?per_page=10&search=${searchTerm}`);
     const posts = await response.json();
 
     const postPromises = posts.map(async (post) => {
