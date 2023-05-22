@@ -22,15 +22,6 @@
   margin: 20px;
 }
 
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  font-weight: bold;
-}
 
 .result-item {
   display: flex;
