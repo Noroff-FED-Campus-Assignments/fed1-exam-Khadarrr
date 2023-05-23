@@ -45,7 +45,6 @@ h6 {
   color: #6c757d;
   font-family: "Croissant One", sans-serif;
   padding: 20px;
-
 }
 
 p {
@@ -84,15 +83,26 @@ header {
 
 .header-words {
   font-family: "Croissant One", sans-serif;
-  color: #6c96da;
+  color: white;
   font-weight: bold;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.header-words:hover {
+    color: #6c96da;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
 }
 
 .logo {
   margin-right: 20px;
   border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .logo img {
@@ -154,13 +164,8 @@ nav li a:hover {
   top: 0;
 }
 
-.hamburger span:nth-child(2),
-.hamburger span:nth-child(3) {
+.hamburger span:nth-child(2) {
   top: 9px;
-}
-
-.hamburger span:nth-child(4) {
-  bottom: 0;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -175,6 +180,10 @@ nav li a:hover {
 .hamburger.active span:nth-child(3) {
   top: 9px;
   transform: rotate(-45deg);
+}
+
+.hamburger span:nth-child(3) {
+  bottom: 0;
 }
 
 .hamburger.active + nav {
