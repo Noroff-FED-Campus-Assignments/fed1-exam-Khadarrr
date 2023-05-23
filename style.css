@@ -50,6 +50,7 @@
   border: none;
   border-radius: 4px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -150,7 +151,6 @@
   width: 50%;
   padding: 20px;
   box-sizing: border-box;
-  
 }
 
 .spotlight-post h2 {
@@ -162,4 +162,18 @@
   font-size: 14px;
   font-weight: bold;
   line-height: 1.5;
+}
+
+.read-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6c96da;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.read-more-button:hover {
+  background-color: #6c757d;
 }

@@ -25,3 +25,11 @@ const postId = getPostIdFromURL();
     }
 
     fetchPostDetails();
+
+    const postContainer = document.querySelector('.post-container');
+
+    function showPostContainer() {
+      postContainer.classList.add('visible');
+    }
+    
+    setTimeout(showPostContainer, 555);

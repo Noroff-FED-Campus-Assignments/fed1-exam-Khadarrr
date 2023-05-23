@@ -1,7 +1,6 @@
 .fieldset {
   margin-bottom: 20px;
-  background-color: #6c757d;
-  color: white;
+  background-color: white;
 }
 
 .fieldset label {
@@ -13,7 +12,7 @@
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 200px;
+  width: 350px;
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -21,7 +20,6 @@
 .results {
   margin: 20px;
 }
-
 
 .result-item {
   display: flex;
@@ -78,27 +76,26 @@
   padding: 10px 20px;
   border-radius: 4px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .back-link button:hover {
   background-color: #6c757d;
 }
 
-  
-  .load-more-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #6c96da;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 250px;
-  }
-  
-  .load-more-button:hover {
-    background-color: #6c757d;
-  }
-  
+.load-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #6c96da;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 250px;
+}
+
+.load-more-button:hover {
+  background-color: #6c757d;
+}

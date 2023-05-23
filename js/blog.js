@@ -63,31 +63,58 @@ fetchBlogPost();
 
 const spotlightPosts = document.querySelector('.spotlight-posts');
 
-    fetch("https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts?per_page=2")
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch spotlight posts.");
-        }
-        return response.json();
-      })
-      .then(posts => {
-        posts.forEach(post => {
-          const postElement = document.createElement('div');
-          postElement.classList.add('spotlight-post');
+fetch("https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts?per_page=2")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Failed to fetch spotlight posts.");
+    }
+    return response.json();
+  })
+  .then(posts => {
+    posts.forEach(post => {
+      const postElement = document.createElement('div');
+      postElement.classList.add('spotlight-post');
 
-          const titleElement = document.createElement('h2');
-          titleElement.textContent = post.title.rendered;
+      const titleElement = document.createElement('h2');
+      titleElement.textContent = post.title.rendered;
 
-          const contentElement = document.createElement('div');
-          contentElement.innerHTML = post.content.rendered;
+      const mediaElement = document.createElement('div');
+      mediaElement.classList.add('spotlight-media');
 
-          postElement.appendChild(titleElement);
-          postElement.appendChild(contentElement);
+      if (post.featured_media) {
+        fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/media/${post.featured_media}`)
+          .then(mediaResponse => {
+            if (!mediaResponse.ok) {
+              throw new Error("Failed to fetch media.");
+            }
+            return mediaResponse.json();
+          })
+          .then(media => {
+            const imageUrl = media.source_url;
+            const imageElement = document.createElement('img');
+            imageElement.src = imageUrl;
+            mediaElement.appendChild(imageElement);
+          })
+          .catch(error => {
+            console.log('Error fetching media:', error);
+          });
+      }
 
-          spotlightPosts.appendChild(postElement);
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching spotlight posts:', error);
-      });
+      const readMoreLink = `details.html?id=${post.id}`;
+      const readMoreButton = document.createElement('a');
+      readMoreButton.href = readMoreLink;
+      readMoreButton.textContent = 'Read more';
+      readMoreButton.classList.add('read-more-button');
+
+      postElement.appendChild(titleElement);
+      postElement.appendChild(mediaElement);
+      postElement.appendChild(readMoreButton);
+
+      spotlightPosts.appendChild(postElement);
+    });
+  })
+  .catch(error => {
+    console.log('Error fetching spotlight posts:', error);
+  });
+
 

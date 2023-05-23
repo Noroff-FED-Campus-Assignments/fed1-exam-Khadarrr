@@ -379,4 +379,8 @@ small {
   .spotlight-post div {
     font-size: 10px;
   }
+
+  .read-more-button {
+    font-size: 10px;
+  }
 }

@@ -8,7 +8,7 @@ let totalPosts = 0;
 
 async function fetchBlogPosts(searchTerm, page) {
   try {
-    const response = await fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/?per_page=${postsPerPage}&search=${searchTerm}&page=${page}`);
+    const response = await fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/?per_page=${postsPerPage}&page=${page}&search=${encodeURIComponent(searchTerm)}&searchFields=title`);
     const posts = await response.json();
 
     totalPosts = parseInt(response.headers.get('X-WP-Total'));
@@ -44,10 +44,12 @@ async function fetchBlogPosts(searchTerm, page) {
       `;
     });
 
-    resultContainer.innerHTML += resultsHTML.join("");
+    resultContainer.innerHTML = resultsHTML.join("");
 
     if (currentPage * postsPerPage >= totalPosts) {
       loadMoreButton.style.display = "none";
+    } else {
+      loadMoreButton.style.display = "block";
     }
   } catch (error) {
     console.log(error);
