@@ -12,7 +12,7 @@
   padding: 8px;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
-  width: 350px;
+  width: 200px;
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -98,4 +98,10 @@
 
 .load-more-button:hover {
   background-color: #6c757d;
+}
+
+.submit-button {
+  background-color: #6c96da;
+  color: white;
+  cursor: pointer;
 }
