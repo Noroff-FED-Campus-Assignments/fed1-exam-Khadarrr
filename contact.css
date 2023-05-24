@@ -6,11 +6,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .form-container {
   flex: 1;
   padding-right: 50px;
+  max-width: 500px; 
 }
 
 .form-header {
@@ -68,12 +70,13 @@ button:hover {
   flex: 1;
   text-align: center;
   position: relative;
+  max-width: 500px; 
 }
 
 .contact-img {
   width: 100%;
   height: auto;
-  max-width: 500px;
+  max-width: 100%;
   max-height: 400px;
   object-fit: cover;
   border-radius: 8px;
@@ -97,4 +100,21 @@ button:hover {
 .validation-message.success {
   background-color: #6c96da;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-container {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .image-container {
+    max-width: 100%;
+    margin-top: 20px;
+  }
 }
