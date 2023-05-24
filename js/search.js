@@ -36,7 +36,7 @@ async function fetchBlogPosts(searchTerm, page) {
             <img src="${imageUrl}" alt="Post Image">
           </div>
           <div class="result-content">
-            <h2>${post.title.rendered}</h2>
+          <a href="${detailsPageLink}"><h2>${post.title.rendered}</h2></a>
             <p>${post.excerpt.rendered}</p>
             <a href="${detailsPageLink}">Read more</a>
           </div>
