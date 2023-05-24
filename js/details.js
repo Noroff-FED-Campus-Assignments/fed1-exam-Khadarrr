@@ -1,35 +1,33 @@
 const postId = getPostIdFromURL();
-   
 
-    const postTitleEl = document.querySelector("#post-title");
-    const postContentEl = document.querySelector("#post-content");
+const postTitleEl = document.querySelector("#post-title");
+const postContentEl = document.querySelector("#post-content");
 
+async function fetchPostDetails() {
+  try {
+    const response = await fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/${postId}`);
+    const post = await response.json();
 
-    
-    async function fetchPostDetails() {
-      try {
-        const response = await fetch(`https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/${postId}`);
-        const post = await response.json();
+    postTitleEl.textContent = post.title.rendered;
+    postContentEl.innerHTML = post.content.rendered;
 
-        postTitleEl.textContent = post.title.rendered;
-        postContentEl.innerHTML = post.content.rendered;
-       
-      } catch (error) {
-        console.log(error);
-      }
-    }
+    document.title = post.title.rendered;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-    function getPostIdFromURL() {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get("id");
-    }
+function getPostIdFromURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("id");
+}
 
-    fetchPostDetails();
+fetchPostDetails();
 
-    const postContainer = document.querySelector('.post-container');
+const postContainer = document.querySelector('.post-container');
 
-    function showPostContainer() {
-      postContainer.classList.add('visible');
-    }
-    
-    setTimeout(showPostContainer, 555);
+function showPostContainer() {
+  postContainer.classList.add('visible');
+}
+
+setTimeout(showPostContainer, 555);
