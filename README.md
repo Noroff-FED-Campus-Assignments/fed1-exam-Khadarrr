@@ -13,7 +13,7 @@ This project was bootstrapped with Vite.
 <!-- You must replace these links -->
 
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
-- [Design](_LINK_TO_FIGMA_)
+- [Design](https://www.figma.com/file/4Dg8G18d9CLhdazU8Ese2O/Untitled?type=design&node-id=110%3A83&t=n5IIfDHKQRMBpZAI-1)
 - [Production deploy](_LINK_TO_WEBSITE_)
 - [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
 - [API Docs](_LINK_TO_API_DOCS_)
@@ -157,5 +157,5 @@ Make sure you go through this checklist before submitting your project to Moodle
 
 ## Authors
 
-- _YOURE_NAME_ (@_your_github_username_)
+- Khadar Hashi (@Khadarrr)
 - Monde Sineke (@S3ak)

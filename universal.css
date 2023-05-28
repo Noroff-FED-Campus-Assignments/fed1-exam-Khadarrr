@@ -9,6 +9,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --font-croissant-one: "Croissant One", sans-serif;
+  --primary-color: #6c96da;
+  --secondary-color: #6c757d;
+  --ease: ease-in-out;
+  --motionOK: 1;
 }
 
 html {
@@ -38,18 +43,19 @@ h4,
 h5,
 h6 {
   margin: 0;
-  color: #6c96da;
+  color: var(--primary-color);
 }
 
 .titales {
-  color: #6c757d;
-  font-family: "Croissant One", sans-serif;
+  color: black;
+  font-family: var(--font-croissant-one);
   padding: 20px;
+  font-size: 30px;
 }
 
 p {
   color: black;
-  size: bold;
+  font-weight: bolder;
   margin: 0;
 }
 
@@ -72,17 +78,17 @@ img {
 }
 
 header {
-  background-color: #6c757d;
+  background-color: var(--secondary-color);
   padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: "Croissant One", sans-serif;
+  font-family: var(--font-croissant-one);
 }
 
 .header-words {
-  font-family: "Croissant One", sans-serif;
+  font-family: var(--font-croissant-one);
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -90,7 +96,7 @@ header {
 }
 
 .header-words:hover {
-  color: #6c96da;
+  color: var(--primary-color);
 }
 
 a {
@@ -140,10 +146,11 @@ nav li a {
 }
 
 nav li a:hover {
-  color: #6c96da;
+  color: var(--primary-color);
 }
+
 .hamburger {
-  color: #6c757d;
+  color: var(--secondary-color);
   display: none;
   width: 30px;
   height: 20px;
@@ -206,11 +213,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #6c757d;
+  background-color: var(--secondary-color);
   color: white;
 }
+
 footer {
-  background-color: #6c757d;
+  background-color: var(--secondary-color);
   background-image: url(./assets/footer-img.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -239,7 +247,7 @@ small {
   align-items: center;
   width: 200px;
   height: 30px;
-  background-color: #6c96da;
+  background-color: var(--primary-color);
   color: #fff;
   font-size: 24px;
   border-radius: 5px;
@@ -261,7 +269,7 @@ small {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #6c757d;
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,7 +278,7 @@ small {
 
 .loader {
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #6c96da;
+  border-top: 4px solid var(--primary-color);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -310,7 +318,7 @@ small {
   nav ul {
     flex-direction: column;
     align-items: flex-start;
-    background-color: #6c757d;
+    background-color: var(--secondary-color);
     padding: 20px;
     display: none;
   }
@@ -321,7 +329,7 @@ small {
   }
 
   nav li a:hover {
-    color: #6c96da;
+    color: var(--primary-color);
   }
 
   .hamburger {
@@ -396,14 +404,14 @@ small {
 
   .spotlight-post img {
     width: 100%;
-    height: 350px;
+    height: 200px;
     object-fit: cover;
   }
 
   .titales {
-    color: #6c757d;
+    color: var(--secondary-color);
     font-family: "Croissant One", sans-serif;
     padding: 20px;
     font-size: 20px;
-}
+  }
 }
