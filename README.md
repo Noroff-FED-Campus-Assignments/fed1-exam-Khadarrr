@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/EF97x2Z3)
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10979834&assignment_repo_type=AssignmentRepo)
 # FED Exam - Vanilla Front-end Website
 
@@ -12,11 +13,11 @@ This project was bootstrapped with Vite.
 <!-- You must replace these links -->
 
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
-- [Design](_LINK_TO_FIGMA_)
-- [Production deploy](_LINK_TO_WEBSITE_)
-- [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
-- [API Docs](_LINK_TO_API_DOCS_)
-- [API Endpoint](_LINK_TO_API_DOC)
+- [Design](https://www.figma.com/file/4Dg8G18d9CLhdazU8Ese2O/Untitled?type=design&node-id=110%3A83&t=n5IIfDHKQRMBpZAI-1)
+- [Production deploy](https://github.com/Noroff-FED-Campus-Assignments/fed1-exam-Khadarrr)
+- [Deployment CI](https://fed-exam-khadar.netlify.app)
+- [API Docs](https://artsandcultureblog.flywheelsites.com/)
+- [API Endpoint](https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/)
 
 ## Deployment
 
@@ -27,7 +28,72 @@ YOu can update your deployment pipeling by editing the [vercel.json](https://ver
 
 ## Report
 
-_ADD_YOUR_REPORT_HERE_
+Fed-exam 2023
+
+The assignment:
+
+I Chose to make a blog about arts and culture, very versatile and big subject but more pointed at modern culture and some arts subjects. Ask a lokal artist from Norway on instagram if could use her work on my site and got the green light as long as a gave her credit for her own work, and had also a friend who’s  an artist and got to use his work to. Further I would make a «spotlight-light» section for their blog post. For the other post I used chatgpt to generate some topics for me and I chose the the ones I found relevant for my assignment. 
+
+Backend/ Hosting api call:
+
+At the start of the assignment I used a lot of time on trying to understand and implement strapi for my Api calls, but got to complicated and started to lose many hours because I was not comfortable with the program and ended up with using Wordpress and flywheel for my assignment.
+
+
+Figma and the design prossess:
+
+Started with the moodboard then the color pallet and so on as you can see in the Figma file. And I visited a lot of site to get inspired from their works in the startfase of the assignment. Putting them as an attachment at end.
+For my logo I found it on «https://pngtree.com/» and the footer, transparent png pictures.
+
+
+ The Coding:
+
+Home-page:
+ made a universa/root css code that effects all the sites, for the header, footer etc.
+	for the hero picture I first had a big picture, the forward I changed it to 	50/50 header and picture, I wanted to make my design look modern 		and have dinamic feel to it, because of that I used box shadow around the elements.
+JS: for the Carousell I used a framework(Swiper), took a little bit before I understood how it worked, I choose to have a autoplay on it and you can drag it when you stop the carousel, on phone it works with your fingers. For the post I made I call for it and another one for the media to get the picture from WP, added the promise so is show it all, post and media and then add it to the innerHTML.
+
+Blog-page:
+same call as before for the posts and media and a load more posts to show the rest of the remains posts. Added search option at the top that filters the words of the titles of the posts pluss a «back» button to reset the page.
+
+Details-page:
+For the details page I made a postID for each one and you get to this page when you click it from the others. Made the holde section get bigger when you hover over it. And with the same design as the others. Added also a timer before the post shows up 
+
+About-page:
+Picture of the logo and a generated some descriptions about the blod.
+
+
+Contact-page:
+Same style as the about page but with a contact form, green or red conformation at the button of the form and an alert when your form is sendt, re-used the code we learned in other assignment.
+
+Other additional codes:
+
+Loader: tried to make a loader for the blogpost only but ended up with a loader for the whole screen. Used on the pages where the blog-post are viewed
+Clock: had a clock in the footer. 
+
+Interview: 
+I integrated Hotjar into all my sites and obtained numerical data and heatmaps. This feedback provided valuable insights and highlighted areas where improvements could be made: 
+
+Changes Implemented: 
+Spotlight-section 
+Search element on the blog page 
+Color adjustments in the headers 
+Font sizes optimized for both phone and computer views Improved form validation
+
+
+
+Attachments:
+
+https://cheery-cobbler-7853ae.netlify.app/
+
+https://codepen.io/Hyperplexed/pen/MWqNroM
+
+https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2 
+
+https://www.alstadart.com/ 
+
+https://fredrikeine.com/ 
+
+https://public---domain.com/ 
 
 ## Getting Started
 
@@ -156,5 +222,5 @@ Make sure you go through this checklist before submitting your project to Moodle
 
 ## Authors
 
-- _YOURE_NAME_ (@_your_github_username_)
+- Khadar Hashi (@Khadarrr)
 - Monde Sineke (@S3ak)

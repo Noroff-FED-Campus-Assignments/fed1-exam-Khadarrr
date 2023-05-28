@@ -1,0 +1,107 @@
+.fieldset {
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.fieldset label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.fieldset input[type="search"] {
+  padding: 8px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  width: 200px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.results {
+  margin: 20px;
+}
+
+.result-item {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.result-image img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
+}
+
+.result-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.result-content h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.result-content p {
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.result-content a {
+  color: #6c96da;
+  text-decoration: none;
+}
+
+.result-content a:hover {
+  text-decoration: underline;
+  color: #6c757d;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.back-link button {
+  background-color: #6c96da;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-link button:hover {
+  background-color: #6c757d;
+}
+
+.load-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #6c96da;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 250px;
+}
+
+.load-more-button:hover {
+  background-color: #6c757d;
+}
+
+.submit-button {
+  background-color: #6c96da;
+  color: white;
+  cursor: pointer;
+}

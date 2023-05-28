@@ -1,13 +1,191 @@
-/* the props */
-@import "open-props/style";
+.header-section {
+  padding: 50px;
+}
 
-/* optional imports that use the props */
-@import "open-props/normalize";
-@import "animate.css";
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-@import "css/variables.css";
-@import "css/reset.css";
-@import "css/utilities.css";
-@import "css/layout.css";
-@import "css/form.css";
-@import "css/ui.css";
+.text-container {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.text-header {
+  font-size: 40px;
+  margin-bottom: 35px;
+  font-weight: bold;
+}
+
+.text-content {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #6c757d;
+}
+
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #6c96da;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-image {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.post-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #6c96da;
+}
+
+.post-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.post-content a {
+  display: inline-block;
+  background-color: #6c96da;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.post-content a:hover {
+  background-color: #6c757d;
+}
+
+.spotlight-section {
+  background-color: #fff;
+  padding: 25px;
+  color: black;
+}
+
+.spotlight-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+
+.spotlight-posts {
+  display: flex;
+  flex-direction: row;
+}
+
+.spotlight-post {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.spotlight-post h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.spotlight-post div {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.spotlight-post img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+}
+
+.read-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6c96da;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.read-more-button:hover {
+  background-color: #6c757d;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="_REPLACE_WITH_DESCRIPTION_" />
+    <meta name="keywords" content="HTML, CSS, JavaScript," />
+    <meta name="Khadar" content="@Khadarrr" />
+    <link rel="stylesheet" href="/universal.css" />
+    <link rel="stylesheet" href="/contact.css" />
+    <script type="module" defer src="./js/app.js"></script>
+    <script type="module" defer src="./js/contact.js"></script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3504191, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+    <title>Contact Page</title>
+  </head>
+  <body class="animate__animated animate__fadeIn">
+    <header>
+      <div class="logo">
+        <a href="./index.html"
+          ><img
+            src="/assets/—Pngtree—human brain thinking brain wave_6700427.png"
+            alt="Logo"
+        /></a>
+      </div>
+      <a href="/index.html"><h2 class="header-words">ART'S AND CULTURE</h2></a>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/blog.html">BLOG</a></li>
+            <li><a href="/about.html">ABOUT</a></li>
+            <li><a href="/contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+          <div class="contact-container">
+            <div class="form-container">
+              <h1 class="form-header">CONTACT</h1>
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="name">FULL NAME</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-MAIL</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">PHONE NUMBER</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div class="form-group">
+                  <label for="subject">SUBJECT</label>
+                  <textarea id="subject" name="subject" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+              <div id="validation-message" class="validation-message"></div>
+            </div>
+            <div class="image-container">
+              <img class="contact-img" src="/assets/Rectangle 7.png" alt="artistic picture of a man inside a wall" />
+            </div>
+          </div>
+        </section>
+      </main>
+      
+
+    <footer class="footer">
+        <div class="clock-cont">
+            <button class="clock-button">
+              <div class="clock"></div>
+            </button>
+            <small>Made by @Khadarrr</small>
+      </footer>
+  </body>
+</html>

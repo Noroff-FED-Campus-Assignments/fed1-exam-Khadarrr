@@ -1,0 +1,120 @@
+.contact-section {
+  padding: 50px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  flex: 1;
+  padding-right: 50px;
+  max-width: 500px; 
+}
+
+.form-header {
+  font-family: "Croissant One", sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+.form-group {
+  display: grid;
+  gap: 10px;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  text-align: left;
+  color: black;
+}
+
+input,
+textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #6c757d;
+  width: 100%;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #6c96da;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6c757d;
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  max-width: 500px; 
+}
+
+.contact-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.validation-message {
+  display: none;
+  background-color: #ff6b6b;
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.validation-message::before {
+  content: "⚠";
+  margin-right: 5px;
+}
+
+.validation-message.success {
+  background-color: #6c96da;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-container {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .image-container {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
