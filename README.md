@@ -17,7 +17,7 @@ This project was bootstrapped with Vite.
 - [Production deploy](https://github.com/Noroff-FED-Campus-Assignments/fed1-exam-Khadarrr)
 - [Deployment CI](https://fed-exam-khadar.netlify.app)
 - [API Docs](https://artsandcultureblog.flywheelsites.com/)
-- [API Endpoint](http://arts-culture.local/)
+- [API Endpoint](https://artsandcultureblog.flywheelsites.com/wp-json/wp/v2/posts/)
 
 ## Deployment
 
